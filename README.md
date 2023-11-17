@@ -4,6 +4,7 @@
 **Release Date:** 2023-11-16
 
 This Python script, named Router Config Retrieval (RCR), establishes Telnet sessions to multiple routers, executes commands specified in the 'commands.cfg' file, and saves the output in Markdown format. It also generates a 'toc.yml' file to create a table of contents.
+I intend this script to be used with an EVE-NG lab for extracting device information in an automated way.  You could use it with physical devices, but I have not included support for Telnet authentication.  It is trivial to add this, but in a production environment rcr is a really poor starting point for so many reasons. Please use this for lab and simulation support only.
 
 ## Authors:
 - [OpenAI](https://www.openai.com/)
