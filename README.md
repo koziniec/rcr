@@ -24,3 +24,13 @@ The `routers.cfg` file is used to specify information about routers. It follows 
 
 ```plaintext
 router_name,router_ip,router_port
+
+- router_name: A user-defined name for the router.
+- router_ip: The IP address of the router.
+- router_port: The TCP port number for the Telnet connection.
+
+## Example:
+
+```plaintext
+R1,192.168.1.1,23
+R2,192.168.1.2,23
