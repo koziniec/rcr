@@ -24,14 +24,50 @@ The `routers.cfg` file is used to specify information about routers. It follows 
 
 ```plaintext
 router_name,router_ip,router_port
-
+```
 - router_name: A user-defined name for the router.
 - router_ip: The IP address of the router.
 - router_port: The TCP port number for the Telnet connection.
 
+## Example:
+
+```plaintext
+R1,192.168.1.1,32769
+R2,192.168.1.1,32770
+```
+
+## `commands.cfg` File
+The commands.cfg file contains a list of commands to be executed on each router. Each line in the file represents a command to be executed, following this format:
+
+```plaintext
+command_1
+command_2
+command_3
+```
+- One IOS command per line
 
 ## Example:
 
 ```plaintext
-R1,192.168.1.1,23
-R2,192.168.1.2,23
+show ip interface brief
+show ip ospf neighbors
+```
+
+## Running crc
+
+- Make sure you have a valid (`commands.cfg`) and (`routers.cfg`) in your current directory
+  
+```plaintext
+python crc.py
+```
+- crc will create a directory (`_docs`) with a subdirectory for each device in the (`routers.cfg`) file.  Within each router directory a seperate markdown encoded file will be created with the output of each command specified in the (`commands.cfg`) file.
+- crc will create a toc.tmal (Table of Contentes in YAML) file in the current directory describing the location of each file. I use this to form an indexed list for use with gitpages.
+
+
+## Important Notes:
+
+- Ensure there are no leading or trailing whitespaces in the entries.
+- Commands in the commands.cfg file should be valid commands for the routers.
+
+When using these files with the provided Python script, make sure the file paths in the script match the actual file locations on your system. The script assumes that the files are in the same directory.
+
