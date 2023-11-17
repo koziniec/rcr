@@ -61,7 +61,7 @@ show ip ospf neighbors
 python crc.py
 ```
 - crc will create a directory (`_docs`) with a subdirectory for each device in the (`routers.cfg`) file.  Within each router directory a seperate markdown encoded file will be created with the output of each command specified in the (`commands.cfg`) file.
-- crc will create a toc.tmal (Table of Contentes in YAML) file in the current directory describing the location of each file. I use this to form an indexed list for use with gitpages.
+- crc will create a toc.yml (Table of Contentes in YAML) file in the current directory describing the location of each file. I use this to form an indexed list for use with gitpages.
 
 
 ## Important Notes:
