@@ -29,6 +29,7 @@ router_name,router_ip,router_port
 - router_ip: The IP address of the router.
 - router_port: The TCP port number for the Telnet connection.
 
+
 ## Example:
 
 ```plaintext
